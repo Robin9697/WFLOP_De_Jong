@@ -1,0 +1,21 @@
+{
+    "n_turbines"                  : 67,
+    "objective"                   : "LCOE",
+    "yaw_optimizer"               : "geometric_yaw_Jong",
+    "max_yaw"                     : 45.0,
+    "pop_size"                    : 100,
+    "parent_rate"                 : 0.6,
+    "mutation_rate"               : 0.4,
+    "worst_turbines_to_move_rate" : 0.02,
+    "best_layouts_to_keep_rate"   : 0.03,
+    "dynamic_mutation_step"       : 40,
+    "select_method"               : "tournament",
+    "n_wind_speed_bins"           : 1,
+    "n_wind_direction_bins"       : 72,
+    "cut_in_speed"                : 3.0,
+    "cut_out_speed"               : 25.0,
+    "velocity_wake_model"         : "gauss",
+    "minimal_spacing"             : 4,
+    "max_generations"             : 200,
+    "stagnation_generations_stop" : 50
+}

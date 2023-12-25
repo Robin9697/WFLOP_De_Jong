@@ -1,0 +1,1 @@
+from wflop.genetic_algorithm.WFLOP_GA_class import Wflop_ga

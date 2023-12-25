@@ -1,0 +1,99 @@
+{
+    "name": "Gauss-Jimenez-IEA_15MW",
+    "description": "Initialization of a wind farm with IEA_15MW turbines and using Gauss / Jimenez models",
+    "floris_version": "v3.0.0",
+    "logging": {
+    "console": {
+        "enable": 1,
+        "level": "WARNING"
+    },
+    "file": {
+        "enable": 0,
+        "level": "WARNING"
+    }
+    },
+    "solver": {
+    "type": "turbine_grid",
+    "turbine_grid_points": 3
+    },
+    "farm": {
+    "layout_x": [
+        0
+    ],
+    "layout_y": [
+        0
+    ],
+    "turbine_type": [
+        "iea_15MW"
+    ]
+    },
+    "flow_field": {
+    "air_density": 1.225,
+    "reference_wind_height": -1,
+    "turbulence_intensity": 0.06,
+    "wind_directions": [
+        0
+    ],
+    "wind_shear": 0.12,
+    "wind_speeds": [
+        8
+    ],
+    "wind_veer": 0
+    },
+    "wake": {
+    "model_strings": {
+        "combination_model": "sosfs",
+        "deflection_model": "jimenez",
+        "turbulence_model": "crespo_hernandez",
+        "velocity_model": "gauss"
+    },
+    "enable_secondary_steering": 1,
+    "enable_yaw_added_recovery": 1,
+    "enable_transverse_velocities": 1,
+    "wake_deflection_parameters": {
+        "jimenez": {
+            "ad": 0,
+            "bd": 0,
+            "kd": 0.05
+            },
+        "gauss": {
+            "ad": 0.0,
+            "alpha": 0.58,
+            "bd": 0.0,
+            "beta": 0.077,
+            "dm": 1.0,
+            "ka": 0.38,
+            "kb": 0.004
+            }
+    },
+    "wake_velocity_parameters": {
+        "jensen": {
+            "we": 0.05
+            },
+        "cc": {
+            "a_s": 0.179367259,
+            "b_s": 0.0118889215,
+            "c_s1": 0.0563691592,
+            "c_s2": 0.13290157,
+            "a_f": 3.11,
+            "b_f": -0.68,
+            "c_f": 2.41,
+            "alpha_mod": 1.0
+            },
+        "gauss": {
+            "alpha": 0.58,
+            "beta": 0.077,
+            "ka": 0.38,
+            "kb": 0.004
+            }
+    },
+    "wake_turbulence_parameters": {
+        "crespo_hernandez": {
+            "initial": 0.1,
+            "constant": 0.5,
+            "ai": 0.8,
+            "downstream": -0.32
+            }
+        }
+    }
+}
